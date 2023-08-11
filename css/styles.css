@@ -1,0 +1,225 @@
+/* 
+    main color: #758BFD
+*/
+
+html {
+    font-family:'Ubuntu', sans-serif;
+
+    font-size: 1rem;
+    line-height: 1.5;
+
+    margin: 0;
+    padding: 0;
+
+    color: #343434;
+    background-color: #48CAE4;
+
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+h1 { font-size: 10rem; }
+h2 { font-size: 3rem; padding: 2rem 0; }
+h3 { font-size: 2rem; }
+p { font-size: x-large; }
+
+a:hover {
+    text-decoration: none;
+}
+
+.content-wrap {
+    max-width: 70rem;
+    width: 85%;
+    margin: 0 auto ;
+    padding: 1vh 0;
+}
+
+.no-wrap{
+    white-space: nowrap;
+}
+
+grid-parent {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+grid-item {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+/* Nav Styles 
+--------------------------------------------------------*/
+nav {
+    color: #F7FFF7;
+    background-color: #023E8A;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+
+    display: flex;
+    justify-content: right;
+
+    position: fixed;
+    width: 100%;
+}
+
+nav li {
+    display: inline-block;
+}
+
+
+nav li + li:before {
+    content: " | ";
+    padding: 0 0.5vw;
+}
+
+nav a {
+    color: #FF595E;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+nav a:hover {
+    background-color: #FF595E;
+    color: #27187E;
+    border-radius: 1rem 1rem 1rem 0;
+}
+
+/* Header Styles 
+--------------------------------------------------------*/
+header {
+    background-image: url(../content/images/sunset_cmok.jpg);
+    background-repeat:  no-repeat;
+    background-size: auto;
+    background-position: center;
+    background-attachment: fixed;
+
+    padding-top: 20vh;
+    padding-bottom: 25vh;
+
+    color: #48CAE4;
+
+}
+
+header p { 
+    padding: 1vh;
+}
+
+/* About Styles 
+--------------------------------------------------------*/
+.about {
+    background: #F7FFF7;
+    padding-top: 10vh;
+    padding-bottom: 15vh;
+}
+
+.about img {
+    float: right;
+    max-width: 30rem;
+    width: 75%;
+
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+/* Work Styles 
+--------------------------------------------------------*/
+
+.work {
+    padding-top: 5vh;
+    padding-bottom: 20vh;
+}
+
+.work h2 { 
+    padding-bottom: 0;
+}
+
+.work a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.divider > section {
+    border-bottom: 1px dashed #343434;
+    padding: 4rem 0;
+} 
+
+/* .divider + section:first-of-type {
+    border-top-style: none;
+} */
+
+.divider > section:last-of-type {
+    border-bottom-style: none;
+}
+
+/* Footer Styles 
+--------------------------------------------------------*/
+footer {
+    background: #023E8A;
+    color: #FF595E;
+
+    padding-bottom: 3vh;
+}
+
+.contact-list li {
+    display: inline-block;
+}
+
+footer a {
+    color: #FF595E;
+}
+
+footer li + li:before {
+    color: #F7FFF7;
+    content: " | ";
+    padding: 0 0.5vw;
+}
+
+
+/* Responsive Styles
+--------------------------------------------------------*/
+@media screen and (min-width: 750px) {
+    header, footer {
+        text-align: center;
+    }
+
+    .work-item {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        column-gap: 1rem;
+        row-gap: 1rem;
+
+        margin-bottom: 2rem;
+    }
+
+
+    .contact-list{
+        list-style-type: none;
+    
+        display: flex; 
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:749px){
+    h1 {
+        font-size: 75px;
+        line-height: 0.9;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        line-height: 1;
+    }
+}
