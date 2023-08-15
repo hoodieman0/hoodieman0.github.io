@@ -49,51 +49,81 @@ a:hover {
     white-space: nowrap;
 }
 
-grid-parent {
+.grid-parent {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: min-content auto;
 }
 
-grid-item {
-    padding-top: 1rem;
-    padding-bottom: 2rem;
+.grid-item {
+    /* padding-top: 1rem; */
+    /* padding-bottom: 2rem; */
 }
+
+.sidebar {
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+
 
 /* Nav Styles 
 --------------------------------------------------------*/
 nav {
     color: #F7FFF7;
     background-color: #023E8A;
-    font-size: 1.5rem;
-    padding: 1rem 2rem;
+    font-size: 2rem;
+    padding: 0 1rem 0 2rem;
 
     display: flex;
-    justify-content: right;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 100%;
 
     position: fixed;
-    width: 100%;
+}
+
+nav ul {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 nav li {
-    display: inline-block;
-}
-
-
-nav li + li:before {
-    content: " | ";
-    padding: 0 0.5vw;
+    list-style-type: none;
+    padding: 1rem;
 }
 
 nav a {
-    color: #FF595E;
+    color: #F7FFF7;
     text-decoration: none;
     padding: 0.5rem;
 }
 
 nav a:hover {
-    background-color: #FF595E;
-    color: #27187E;
+    background-color: #48CAE4;
+    color: #F7FFF7;
     border-radius: 1rem 1rem 1rem 0;
+}
+
+
+nav .contact-list img {
+    max-width: 1vw;
+}
+
+nav .contact h3 {
+    padding-left: .5rem;
+}
+
+nav .contact-list a {
+    padding: 1.25rem;
+}
+
+nav .contact-list {
+    display: inline-flex;
+}
+
+nav .contact-list a:hover {
+    background-color: transparent;
 }
 
 /* Header Styles 
@@ -112,16 +142,16 @@ header {
 
 }
 
-header p { 
-    padding: 1vh;
-}
-
 /* About Styles 
 --------------------------------------------------------*/
 .about {
     background: #F7FFF7;
     padding-top: 10vh;
     padding-bottom: 15vh;
+}
+
+.about h3 {
+    padding-bottom: 2rem;
 }
 
 .about img {
@@ -139,6 +169,14 @@ header p {
 .work {
     padding-top: 5vh;
     padding-bottom: 20vh;
+}
+
+.work img {
+    max-width: 25%;
+    height: auto;
+    width: auto;
+
+    padding: 1rem;
 }
 
 .work h2 { 
@@ -165,7 +203,7 @@ header p {
 
 /* Footer Styles 
 --------------------------------------------------------*/
-footer {
+/* footer {
     background: #023E8A;
     color: #FF595E;
 
@@ -184,7 +222,7 @@ footer li + li:before {
     color: #F7FFF7;
     content: " | ";
     padding: 0 0.5vw;
-}
+} */
 
 
 /* Responsive Styles
@@ -204,12 +242,12 @@ footer li + li:before {
     }
 
 
-    .contact-list{
+    /* .contact-list{
         list-style-type: none;
     
         display: flex; 
         justify-content: center;
-    }
+    } */
 }
 
 @media screen and (max-width:749px){
