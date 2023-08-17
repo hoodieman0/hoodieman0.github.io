@@ -97,13 +97,18 @@ nav a {
     color: #F7FFF7;
     text-decoration: none;
     padding: 0.5rem;
+
+    /* Moves the background from left to right to reveal the new color */
+    background: linear-gradient(to right, transparent 50%, #48CAE4 50%) left;
+    border-radius: 1rem 1rem 1rem 0;
+    background-size: 200% 100%;
+    transition: .5s ease-out;
 }
 
 nav a:hover {
-    background-color: #48CAE4;
-    color: #F7FFF7;
-    border-radius: 1rem 1rem 1rem 0;
+    background-position: right;
 }
+
 
 
 nav .contact-list img {
