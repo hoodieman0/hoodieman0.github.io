@@ -12,9 +12,11 @@ html {
     padding: 0;
 
     color: #343434;
-    background-color: #48CAE4;
+    background-color: #F7FFF7;
 
     box-sizing: border-box;
+
+    scroll-behavior: smooth;
 }
 
 *, *:before, *:after {
@@ -51,19 +53,16 @@ a:hover {
 
 .grid-parent {
     display: grid;
-    grid-template-columns: min-content auto;
+    grid-template-columns: min-content 1fr;
+
+    
+    align-items: flex-start;
 }
 
-.grid-item {
-    /* padding-top: 1rem; */
-    /* padding-bottom: 2rem; */
+.sticky {
+    position: sticky;
+    top: 0;
 }
-
-.sidebar {
-    grid-row-start: 1;
-    grid-row-end: 5;
-}
-
 
 
 /* Nav Styles 
@@ -71,26 +70,27 @@ a:hover {
 nav {
     color: #F7FFF7;
     background-color: #023E8A;
-    font-size: 2rem;
-    padding: 0 1rem 0 2rem;
+    font-size: 1.75rem;
+    padding: 0 1rem 0 1rem;
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-around; */
 
-    height: 100%;
+    height: 100vh;
+    text-align: center;
 
-    position: fixed;
+    position: sticky;
 }
 
-nav ul {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+nav h2 a {
+    background: transparent;
 }
 
 nav li {
     list-style-type: none;
     padding: 1rem;
+    position: sticky;
 }
 
 nav a {
@@ -102,33 +102,33 @@ nav a {
     background: linear-gradient(to right, transparent 50%, #48CAE4 50%) left;
     border-radius: 1rem 1rem 1rem 0;
     background-size: 200% 100%;
-    transition: .5s ease-out;
+    transition: .3s ease-out;
 }
+
 
 nav a:hover {
     background-position: right;
 }
 
-
-
 nav .contact-list img {
-    max-width: 1vw;
+    max-width: 1.5vw;
 }
 
 nav .contact h3 {
-    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
+nav .contact {
+    justify-content: flex-end;
 }
 
 nav .contact-list a {
     padding: 1.25rem;
+    background: transparent;
 }
 
 nav .contact-list {
     display: inline-flex;
-}
-
-nav .contact-list a:hover {
-    background-color: transparent;
 }
 
 /* Header Styles 
@@ -137,15 +137,27 @@ header {
     background-image: url(../content/images/sunset_cmok.jpg);
     background-repeat:  no-repeat;
     background-size: auto;
-    background-position: center;
-    background-attachment: fixed;
-
-    padding-top: 20vh;
-    padding-bottom: 25vh;
+    background-position:  center ;
+    background-attachment: local;
 
     color: #48CAE4;
 
+    padding-top: 20vh;
+    padding-bottom: 25vh;
+    
 }
+
+header h1, header h2 {
+    background-color: rgba(52, 52, 52, 0.20);
+}
+
+header h1::after, header h2::after {
+    content: "";
+    position: relative;
+    
+}
+
+
 
 /* About Styles 
 --------------------------------------------------------*/
