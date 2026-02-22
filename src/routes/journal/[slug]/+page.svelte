@@ -1,4 +1,5 @@
 <script>
+    import { resolve } from '$app/paths';
     let { data } = $props()
 </script>
 
@@ -8,7 +9,7 @@
         <h2>{data.meta.details}</h2>
     </div>
 
-    <img src={data.meta.image} alt='Post Header'/>
+    <img src={resolve(`${data.meta.image}`)} alt='Post Header'/>
 
     <div class="markdown">
         <h5>Posted: {data.meta.date.toDateString().split(' ').slice(1).join(' ')}</h5>

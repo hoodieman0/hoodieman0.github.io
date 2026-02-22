@@ -3,6 +3,7 @@
 	import MAILTO_SVG from '$lib/assets/email-svgrepo-com-white.svg'
 	import GITHUB_SVG from '$lib/assets/github-mark/github-mark/github-mark-white.svg'
 	import LINKEDIN_SVG from '$lib/assets/linkedin-logos/LinkedIn-Logos/In/Digital/White/1x/In-White-48.png'
+    import { base, resolve } from '$app/paths';
 
 	let { children } = $props();
 </script>
@@ -18,12 +19,12 @@
 
 <nav>
 	<div class="name slide-background">
-		<a href="/"><h1>James Mok</h1></a>
+		<a href="{resolve("/")}"><h1>James Mok</h1></a>
 	</div>
 	<div class="links">
-		<a href="/#projects" class="slide-background">Projects</a>
-		<a href="/journal" class="slide-background">Journal</a>
-		<a href="/#about" class="slide-background">About</a>
+		<a href="{resolve("/")}#projects" class="slide-background">Projects</a>
+		<a href="{resolve("/journal")}" class="slide-background">Journal</a>
+		<a href="{resolve("/")}#about" class="slide-background">About</a>
 		<div>
 			<a href="mailto:jmok780@gmail.com" aria-label="Send an email to James Mok"> 
 				<img src={MAILTO_SVG} alt="Email" class="zoom">

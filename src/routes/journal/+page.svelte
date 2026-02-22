@@ -1,5 +1,6 @@
 <script lang="ts">
     import { fade } from 'svelte/transition'
+    import { resolve } from '$app/paths';
 
     import JournalCard from "./JournalCard.svelte";
 
@@ -14,7 +15,7 @@
 
     <div class=" post-container">
         {#each data.postMeta as post}
-            <a href="/journal/{post.slug}"><JournalCard {...post} /></a>
+            <a href={resolve(`/journal/${post.slug}`)}><JournalCard {...post} /></a>
         {/each}
     </div>
 

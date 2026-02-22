@@ -1,11 +1,12 @@
 <script lang="ts">
+    import { resolve } from '$app/paths';
     let { title, image = undefined } = $props();
     let hovering = $state(false)
 </script>
 
 <div class="card-container zoom">
     {#if image !== undefined}
-        <img src={image} alt='Journal Preview'/>
+        <img src={resolve(`${image}`)} alt='Journal Preview'/>
     {/if}
     <h3>{title}</h3>
 </div>

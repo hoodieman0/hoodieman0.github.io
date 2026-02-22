@@ -1,5 +1,6 @@
 <script lang="ts">
     import { fade } from 'svelte/transition';
+    import { resolve } from '$app/paths';
 
     let { children, data } = $props();
 </script>
@@ -7,7 +8,7 @@
 <aside class="sidebar" in:fade={{duration: 750}}>
     <h2>Recent Posts</h2>
     {#each data.postMeta as post}
-        <p><a href="/journal/{post.slug}">{post.title}</a></p>
+        <p><a href={resolve(`/journal/${post.slug}`)}>{post.title}</a></p>
     {/each}
 </aside>
 

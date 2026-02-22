@@ -17,7 +17,8 @@ aria-roledescription="Project card">
             class="bg"
             style="background-image: url('{backgroundImage}')"
             aria-hidden="true"
-        />
+        >
+        </div>
         <div class="overlay" aria-hidden="true"></div>
     {/if}
 

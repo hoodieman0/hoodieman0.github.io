@@ -1,5 +1,6 @@
 <script lang="ts">
     import { fade } from 'svelte/transition'
+    import { resolve } from '$app/paths';
 
     import headshot from '$lib/assets/headshot.png'
     import piNas from '$lib/assets/NAS-BOX-800x533.jpg'
@@ -86,7 +87,7 @@
         When I'm not working I spend my time appreciating games and stories
         learning Japanese, upgrading my homelab, or reading military history. 
         You can read what I've been up to 
-        <i><a href="/journal">in my journal</a></i>.
+        <i><a href="{resolve("/journal")}">in my journal</a></i>.
     </p>
 
     <h2 id="projects">Some Stuff I've Done</h2>
