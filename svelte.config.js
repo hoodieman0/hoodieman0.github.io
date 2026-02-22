@@ -29,9 +29,9 @@ const config = {
 		}),
 
 		paths: {
-			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
+			base: process.argv.includes('dev') ? '' : '/hoodieman0.github.io'
 		},
-		
+
 		alias: {
 			$content: './src/content'
 		}
