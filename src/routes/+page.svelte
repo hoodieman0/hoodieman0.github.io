@@ -115,6 +115,12 @@
             <li>Linux</li>
             <li>Docker</li>
             <li>National Instruments</li>
+            <li>SvelteKit</li>
+        </ul>
+
+        <ul>
+            <li><h3>Standards</h3></li>
+            <li>DISA STIG</li>
         </ul>
         
         <ul>
@@ -122,6 +128,7 @@
             <li>C++</li>
             <li>C#</li>
             <li>Python</li>
+            <li>JavaScript</li>
         </ul>
 
         <ul>
