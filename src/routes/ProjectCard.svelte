@@ -107,7 +107,7 @@ aria-roledescription="Project card">
         padding: 2rem;
 
         margin: 0 auto;
-        text-align: justify;
+        text-align: start;
 
         font-size: 1.2rem;
         overflow: hidden;

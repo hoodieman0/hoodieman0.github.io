@@ -77,7 +77,7 @@
     <h3>{motd}</h3>
     {/key}
     <p>
-        I'm a software engineer with industry experience creating backends
+        I'm a DevOps software engineer with industry experience creating backends
         that are preformant, reliable, and understandable. I'm particularly
         interested in designing solutions for the defense and AI space where 
         quality is a necessity, not an option. 
@@ -171,7 +171,7 @@
     .page-content p 
     {
         font-size: 1.5rem;
-        text-align: justify;
+        text-align: start;
         line-height: 2.5rem;
     }
 

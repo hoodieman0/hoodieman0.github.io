@@ -20,7 +20,7 @@
 <style>
     .markdown
     {
-        text-align: justify;
+        text-align: start;
         max-width: 50vw;
         margin: 0 auto;
         padding: 2rem;
@@ -65,7 +65,7 @@
     .markdown :global(p),
     .markdown :global(ul)
     {
-        text-align: justify;
+        text-align: start;
         font-size: 1.5rem;
     }
 
