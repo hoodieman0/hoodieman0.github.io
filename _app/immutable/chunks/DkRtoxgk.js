@@ -1,1 +1,0 @@
-import{f as e,a as o}from"./CGi7CO3C.js";import"./DXk9iipH.js";const s={title:"Transitioning from C++ to C#",date:"2026-01-17T00:00:00.000Z",details:"Learning the .NET ecosystem",image:"/village.jpg",tags:["C#","dotnet"]},{title:r,date:m,details:d,image:l,tags:g}=s;var i=e("<p>This is a post about dotnet.</p>");function _(t){var a=i();o(t,a)}export{_ as default,s as metadata};
