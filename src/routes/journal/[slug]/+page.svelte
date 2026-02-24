@@ -28,6 +28,17 @@
         border-radius: 10px;
     }
 
+    .markdown :global(code) 
+    {
+        font-style: italic;
+        color: slateblue;
+        border-radius: 10px;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+    }
+
     article img
     {
         display: block;
