@@ -61,6 +61,10 @@
 		background-size: cover;
 	}
 
+	:global(#projects, #about) {
+    	scroll-margin-top: 5rem;
+	}
+
 	.wrapper
 	{
 		display: flex;
