@@ -30,13 +30,9 @@
 
     .markdown :global(code) 
     {
-        font-style: italic;
-        color: slateblue;
-        border-radius: 10px;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        padding-left: 0.25rem;
-        padding-right: 0.25rem;
+        font-size: 0.95rem;
+        font-style: normal;   /* override your current italic rule for inline code */
+        color: #d4d4d4;
     }
 
     article img

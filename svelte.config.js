@@ -1,9 +1,19 @@
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { mdsvex } from 'mdsvex';
+import { createHighlighter } from 'shiki';
+
+const highlighter = await createHighlighter({ themes: ['nord'], langs: ['csharp'] });
 
 const mdsvexConfig = {
-    extensions: ['.md', '.svx']
+    extensions: ['.md', '.svx'],
+	highlight: {
+		highlighter: (code, lang) => {
+        	  const html = highlighter.codeToHtml(code, { lang: lang ?? 'text', theme: 'nord' });
+  				// escape curly braces so Svelte doesn't treat them as template expressions
+  			return html.replace(/\{/g, '&lbrace;').replace(/\}/g, '&rbrace;');
+      	}
+	}
 };
 
 const dev = process.argv.includes('dev');
