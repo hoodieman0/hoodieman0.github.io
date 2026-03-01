@@ -80,4 +80,43 @@
         font-size: 1.5rem;
     }
 
+    @media screen and (max-width: 812px) {
+        .markdown
+        {
+            max-width: 90vw;
+            padding: 1rem;
+        }
+
+        article img
+        {
+            max-width: 90%;
+        }
+
+        .markdown :global(h1)
+        {
+            font-size: 2.5rem;
+            text-align: center;
+            font-weight: bolder;
+        }
+
+        .markdown :global(h2)
+        {
+            font-size: 1.25rem;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .markdown :global(h3)
+        {
+            font-size: 1.75rem;
+        }
+
+        .markdown :global(p),
+        .markdown :global(ul)
+        {
+            text-align: start;
+            font-size: 1rem;
+        }
+    }
+
 </style>

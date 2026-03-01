@@ -1,16 +1,21 @@
 <script lang="ts">
     import { fade } from 'svelte/transition';
     import { resolve } from '$app/paths';
+    import { MediaQuery } from 'svelte/reactivity';
 
     let { children, data } = $props();
+
+    const mobileScreen = new MediaQuery('(max-width: 812px)');
 </script>
 
+{#if !mobileScreen.current}
 <aside class="sidebar" in:fade={{duration: 750}}>
     <h2>Recent Posts</h2>
     {#each data.postMeta as post}
         <p><a href={resolve(`/journal/${post.slug}`)}>{post.title}</a></p>
     {/each}
 </aside>
+{/if}
 
 {@render children()}
 

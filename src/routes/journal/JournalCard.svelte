@@ -1,11 +1,13 @@
 <script lang="ts">
     import { resolve } from '$app/paths';
+    import { MediaQuery } from 'svelte/reactivity';
     let { title, image = undefined } = $props();
     let hovering = $state(false)
+    const mobileScreen = new MediaQuery('(max-width: 812px)');
 </script>
 
 <div class="card-container zoom">
-    {#if image !== undefined}
+    {#if image !== undefined && !mobileScreen.current}
         <img src={resolve(`${image}`)} alt='Journal Preview'/>
     {/if}
     <h3>{title}</h3>
@@ -52,5 +54,16 @@
         height: 100%;
         margin: 0;
         padding: 0;
+    }
+
+    @media screen and (max-width: 812px) {
+        .card-container {
+            height: 25vh;
+            width: 50vw;
+        }
+
+        .card-container h3{
+            font-size: 1rem;
+        }
     }
 </style>

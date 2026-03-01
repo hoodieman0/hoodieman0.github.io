@@ -51,4 +51,19 @@
         background-color: inherit;
     }
 
+    @media screen and (max-width: 812px) {
+        .post-container
+        {
+            display: flex;
+            flex-direction: column;
+            /* grid-template-columns: minmax(0, 30vw); */
+            place-items: center;
+        }
+    
+        .post-container a 
+        {
+            justify-content: center;
+            align-items: center;
+        }
+    }
 </style>

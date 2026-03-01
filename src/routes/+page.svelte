@@ -121,6 +121,7 @@
         <ul>
             <li><h3>Standards</h3></li>
             <li>DISA STIG</li>
+            <li>JSF AV C++</li>
         </ul>
         
         <ul>
@@ -237,4 +238,80 @@
         margin: 0.5rem;
     }
 
+    @media screen and (max-width: 812px) {
+        /* phone page content */
+        .page-content {
+            max-width: 90vw;
+            padding: 1rem;
+        }
+
+        .page-content h1 {
+            font-size: 2.5rem;
+        }
+
+        .page-content h2 
+        {
+            font-size: 2rem;
+        }
+
+        .page-content p {
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
+
+        .page-content img {
+            width: 150px;
+            height: 150px;
+        }
+
+        .project-container 
+        {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 0;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .project-container a 
+        {
+            text-decoration: none;
+            color: inherit;
+            background-color: inherit;
+        }
+
+
+
+        .short-list 
+        {
+            display: flex; 
+            flex-direction: column;
+            gap: 2rem;
+            align-content: space-between; 
+        }
+
+        .short-list ul
+        {
+            text-align: center;
+            list-style: none; 
+
+            border-left: 2px solid whitesmoke;
+        }
+
+        .short-list h3
+        {
+            margin: 1rem auto;
+            font-size: 1.5rem;
+        }
+
+        .short-list li
+        {
+            font-size: 1rem;
+            text-align: left;
+            padding: auto auto 1rem auto;
+            margin: 0.5rem;
+        }
+        
+    }
 </style>

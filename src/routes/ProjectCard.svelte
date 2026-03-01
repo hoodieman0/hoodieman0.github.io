@@ -75,12 +75,12 @@ aria-roledescription="Project card">
         z-index: 0;
     }
 
-.overlay {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    background: rgba(0, 0, 0, 0.35);
-}
+    .overlay {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: rgba(0, 0, 0, 0.35);
+    }
 
     .project-container .content 
     {
@@ -122,5 +122,17 @@ aria-roledescription="Project card">
 
     .project-container img {
 		max-width: 1.75vw;
+    }
+
+    @media screen and (max-width: 812px) {
+        .project-container {
+            width: 40vw;
+            height: 20vh;
+        }
+
+        .project-container p {
+            padding: 1rem;
+            font-size: 1rem;
+        }
     }
 </style>

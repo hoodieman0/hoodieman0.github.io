@@ -3,9 +3,16 @@
 	import MAILTO_SVG from '$lib/assets/email-svgrepo-com-white.svg'
 	import GITHUB_SVG from '$lib/assets/github-mark/github-mark/github-mark-white.svg'
 	import LINKEDIN_SVG from '$lib/assets/linkedin-logos/LinkedIn-Logos/In/Digital/White/1x/In-White-48.png'
-    import { base, resolve } from '$app/paths';
+    import HAMBURGER_SVG from '$lib/assets/burger-menu-svgrepo-com.svg'
+    import CLOSE_SVG from '$lib/assets/close-x-svgrepo-com.svg'
+	import { resolve } from '$app/paths';
 
 	let { children } = $props();
+	let showMenu = $state(false);
+
+	function closeMenu() {
+		showMenu = false;
+	}
 </script>
 
 <svelte:head>
@@ -15,17 +22,29 @@
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </svelte:head>
 
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+</head>
+
 <div class="wrapper">
 
 <nav>
 	<div class="name slide-background">
-		<a href="{resolve("/")}"><h1>James Mok</h1></a>
+		<a href="{resolve("/")}" onclick={closeMenu}><h1>James Mok</h1></a>
 	</div>
+	<label for='menu'>
+	{#if showMenu}
+		<img src={CLOSE_SVG} alt="Close Menu">
+	{:else}
+		<img src={HAMBURGER_SVG} alt="Menu">
+	{/if}
+	</label>
+	<input id='menu' type='checkbox' bind:checked={showMenu}/>
 	<div class="links">
-		<a href="{resolve("/")}#projects" class="slide-background">Projects</a>
-		<a href="{resolve("/journal")}" class="slide-background">Journal</a>
-		<a href="{resolve("/")}#about" class="slide-background">About</a>
-		<div>
+		<a href="{resolve("/")}#projects" class="slide-background" onclick={closeMenu}>Projects</a>
+		<a href="{resolve("/journal")}" class="slide-background" onclick={closeMenu}>Journal</a>
+		<a href="{resolve("/")}#about" class="slide-background" onclick={closeMenu}>About</a>
+		<div class="icons">
 			<a href="mailto:jmok780@gmail.com" aria-label="Send an email to James Mok"> 
 				<img src={MAILTO_SVG} alt="Email" class="zoom">
 			</a>
@@ -170,6 +189,76 @@
 		background-color: rgb(94, 111, 181);
 	}
 
-</style>
+	/* Hide hamburger menu if not mobile screen */
+	nav input[type='checkbox'], nav label {
+		display: none;
+	}
 
+	@media screen and (max-width: 812px) {
+		nav {
+			flex-direction: row;
+			flex-wrap: wrap;
+			gap: 0rem;
+			padding: 1vh 1vw;
+			margin: 0 0;
+			top: 0vh;
+		}
+
+		nav .name {
+			width: 50%;
+			padding: 0rem;
+		}
+
+		nav .name h1 {
+			font-size: 1.5rem;
+		}
+
+		nav label img {
+			max-width: 10vw;
+		}
+
+		nav .links {
+			flex-direction: column;
+			justify-content: space-evenly;
+			gap: 0.5rem;
+			width: 100%;
+			align-items: center;
+		}
+
+		nav .links a{
+			font-size: 3rem;
+			padding: 0.5rem;
+		}
+
+		nav .links .icons {
+			display: flex;
+			flex-direction: row;
+			gap: 1rem;
+			width: 100%;
+			justify-content: center;
+			align-items: center;
+		}
+
+		nav .links img {
+			max-width: 20vw;
+		}
+
+		input[type='checkbox']:checked+div{
+			height: 100vh;
+			width: 100vw;
+		}
+
+		input[type='checkbox']:not(:checked)+div {
+			display: none;
+		}
+
+		/* Stlying the menu icon, the checkbox stays hidden */
+		nav label {
+			text-align: right;
+			display: block;
+			padding: 0.5em;
+			align-self: center;
+		}
+	}
+</style>
 
